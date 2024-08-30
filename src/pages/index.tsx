@@ -11,7 +11,7 @@ export default function Home() {
     <div className="flex flex-col bg-cover">
       <Header />
       {session ? (
-        <>
+        <div>
           <div className="flex-1 overflow-y-scroll no-scrollbar p-6">
             <div className="max-w-4xl mx-auto">
               <div className="flex justify-between items-center">
@@ -24,11 +24,11 @@ export default function Home() {
               <NewMessageForm />
             </div>
           </div>
-        </>
+        </div>
       ) : (
         <div className="h-full flex items-center justify-center flex-col space-y-2.5">
           {status === "loading" ? null : (
-            <>
+            <div>
               <p className="text-lg md:text-2xl lg:text-3xl font-medium text-white">
                 Sign in with GitHub to join the chat!
               </p>
@@ -42,7 +42,7 @@ export default function Home() {
                   Powered by Grafbase &amp; GraphQL Live Queries
                 </a>
               </p>
-            </>
+            </div>
           )}
         </div>
       )}
